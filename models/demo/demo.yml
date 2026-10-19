@@ -16,20 +16,34 @@ models:
       - name: EMP_SALARY
         data_tests:
           - salarycheck
+
   - name: customer
     description: "Customer dbt model"
+
   - name: customer_vw
     description: "Customer View dbt model"
 
+  - name: sales
+    description: "Sales dbt model"
+
 
 sources:
+
   - name: employee
     database: DBT_DB
     schema: PUBLIC
     tables:
       - name: EMPLOYEE_RAW
+
   - name: customer
     database: DBT_DB
     schema: PUBLIC
     tables:
       - name: CUSTOMER_SRC
+
+  - name: sales
+    database: DBT_DB
+    schema: PUBLIC
+    tables:
+      - name: SALES_SRC
+
