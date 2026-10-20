@@ -26,6 +26,9 @@ models:
   - name: sales
     description: "Sales dbt model"
 
+  - name: product
+    description: "Product dbt model"
+
 
 sources:
 
@@ -46,4 +49,10 @@ sources:
     schema: PUBLIC
     tables:
       - name: SALES_SRC
+
+  - name: product
+    database: DBT_DB
+    schema: PUBLIC
+    tables:
+      - name: PRODUCT_SRC
 
