@@ -38,6 +38,9 @@ models:
   - name: final_orders
     description: "final_orders dbt model"
 
+  - name: session
+    description: "Session dbt model"
+
 sources:
 
   - name: employee
@@ -81,4 +84,10 @@ sources:
     schema: PUBLIC
     tables:
       - name: PATIENT_SRC
+
+  - name: session
+    database: DBT_DB
+    schema: PUBLIC
+    tables:
+      - name: SESSION_SRC
 
